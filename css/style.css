@@ -33,7 +33,7 @@ h3 {
     color: #c8b60d;
 }
 
-p{
+p {
     color: white;
     margin-bottom: 2em;
     margin-top: 1em;
@@ -135,6 +135,52 @@ a.skip-to-content:focus {
 }
 /* xx */
 
+/* guest.html styling */
+/* guest picture hover animations */
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-wrapper > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 90%;
+}
+
+.img-wrapper > .content {
+    position: absolute;
+    inset: 0;
+    font-size:1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+    transition: 200ms ease-in-out;
+}
+
+.img-wrapper > .content.fade {
+    opacity: 0;
+}
+
+.img-wrapper:hover > .content.fade {
+    opacity: 1;
+}
+
+.img-wrapper:hover > img.blur {
+    filter: blur(15px);
+}
+
+.content > p {
+    padding: 20px;
+}
+
 
 /* Contact page styling */
 .contact-background-img {
@@ -149,7 +195,7 @@ a.skip-to-content:focus {
     text-align: center
 }
 
-.footer-dark .item.social>a {
+.footer-dark .item.social > a {
     font-size: 20px;
     width: 36px;
     height: 36px;
@@ -163,7 +209,7 @@ a.skip-to-content:focus {
     opacity: 0.75
 }
 
-.footer-dark .item.social>a:hover {
+.footer-dark .item.social > a:hover {
     opacity: 0.9
 }
 
@@ -306,6 +352,23 @@ a.skip-to-content:focus {
         max-width: 800px;
     }
 
+    /* guest.html tablet view */
+    .img-wrapper > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1500px;
+    }
+
+    .img-wrapper > .content {
+        position: absolute;
+        inset: 0;
+        font-size: 2rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* DESKTOP view */
