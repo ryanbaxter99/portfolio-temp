@@ -128,14 +128,13 @@ a.skip-to-content:focus {
     color: #c8b60d;
 }
 
-
-/* may delete vv */
-.video iframe {
-    width: 90%;
-}
-/* xx */
-
 /* guest.html styling */
+/* guest.html episodes and guest name title mobile view */
+#guest-photos > h3,
+#guest-photos > h2 {
+    text-align: center;
+}
+
 /* guest picture hover animations */
 .img-wrapper {
     position: relative;
@@ -148,16 +147,19 @@ a.skip-to-content:focus {
     object-fit: cover;
     object-position: center;
     width: 90%;
+    margin-top: .1em;
+    margin-bottom: 5em
 }
 
 .img-wrapper > .content {
     position: absolute;
     inset: 0;
-    font-size:1rem;
+    font-size: 1rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .img-wrapper > img,
@@ -180,15 +182,111 @@ a.skip-to-content:focus {
 .content > p {
     padding: 20px;
 }
+/* xx */
+
+/* video.html styling */
+
+/* may delete vv */
+.video iframe {
+    width: 90%;
+    height: 90%;
+}
+/* xx */
+
+
+
+
 
 
 /* Contact page styling */
-.contact-background-img {
+
+/* contact.html flipcard css */
+.flipcard {
+    margin: auto;
+    perspective: 1000px;
+    display: grid;
+    background-color: transparent;
+    margin-bottom: 150px;
+}
+    /* / flip the pane when hovered / */
+.flipcard:hover .flipcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flipcard:focus .flipcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flipcard, .flipcard-front, .flipcard-back {
+    /* width: 13em;
+    height: 9em;
+    margin-bottom: 3em; */
+}
+
+/* / flip speed goes here / */
+.flipcard-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    object-fit: contain;
+
+}
+
+/* / hide back of pane during swap / */
+.flipcard-front, .flipcard-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
     text-align: center;
     height: 100px;
     background-image: url("../images/background.jpeg");
 }
 
+/* / front pane, placed above back / */
+.flipcard-front {
+    background-color: transparent;
+}
+
+/* / back, initially hidden pane / */
+.flipcard-back {
+    transform: rotateY(180deg);
+    text-align: center;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
+    padding-top: 1em;
+}
+
+.flipcard-back p {
+    color: #215583;
+    -webkit-text-stroke: 0;
+}
+
+/* Contact grid */
+.personal-photos {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 90%;
+}
+
+.per1 {
+    grid-row: 1 / span 1;
+}
+
+.per2 {
+    grid-row: 2 / span 1;
+}
+
+.per3 {
+    grid-row: 3 / span 1;
+}
+
+.per4 {
+    grid-row: 4 / span 1;
+}
+
+/* xx */
 
 /* style the footer and the footer links */
 .footer-dark .item.social {
@@ -219,31 +317,6 @@ a.skip-to-content:focus {
     font-size: 13px;
     margin-bottom: 0
 }
-
-
-/* Contact grid */
-.personal-photos {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 90%;
-}
-
-.per1 {
-    grid-row: 1 / span 1;
-}
-
-.per2 {
-    grid-row: 2 / span 1;
-}
-
-.per3 {
-    grid-row: 3 / span 1;
-}
-
-.per4 {
-    grid-row: 4 / span 1;
-}
-
 
 
 /* Tablet View */
@@ -362,13 +435,15 @@ a.skip-to-content:focus {
 
     .img-wrapper > .content {
         position: absolute;
+        text-align: center;
         inset: 0;
         font-size: 2rem;
-        padding: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+
 }
 
 /* DESKTOP view */
@@ -377,11 +452,6 @@ a.skip-to-content:focus {
     .mobile-logo {
         display: none;
     }
-
-
-
-
-
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
