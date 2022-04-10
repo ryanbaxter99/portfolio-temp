@@ -279,18 +279,20 @@ a.skip-to-content:focus {
 .contact-form {
     display: flex;
     flex-direction: column;
-    justify-items: center;
-
-    /* justify-content: center; */
-    /* check */
+    text-align: center;
 }
 
+.contact-form > h2 {
+    text-align: center;
+    padding-bottom: 1em;
+}
 
 label {
     display: none;
 }
 
 input, textarea {
+    margin-bottom: .4em;
     width: 300px;
     font-family: "Montserrat", "Trebuchet MS", Helvetica;
 }
