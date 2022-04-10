@@ -37,10 +37,8 @@ p {
     color: white;
     margin-bottom: 2em;
     margin-top: 1em;
-}
-
-label{
-    color: #c8b60d;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 
@@ -117,10 +115,6 @@ a.skip-to-content:focus {
     text-align: center;
 }
 
-/* .welcome-desc {
-    font-size: 16px;
-} */
-
 .recent-episode {
     display: flex;
     flex-direction: column;
@@ -146,6 +140,8 @@ a.skip-to-content:focus {
 .selection-desc {
     text-align: center;
     color: white;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 #guest-photos > h2 {
     color: white;
@@ -168,19 +164,19 @@ a.skip-to-content:focus {
     object-fit: cover;
     object-position: center;
     width: 90%;
-    margin-top: .1em;
+    /* margin-top: .1em; */
     margin-bottom: 5em
 }
 
 .img-wrapper > .content {
     position: absolute;
-    inset: 0;
-    font-size: 1rem;
+    /* inset: 0; */
+    /* font-size: 1rem; */
     padding: 1rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    /* align-items: center; */
+    /* text-align: center; */
 }
 
 .img-wrapper > img,
@@ -205,6 +201,8 @@ a.skip-to-content:focus {
 }
 /* xx */
 
+
+
 /* video.html styling */
 .vid-title {
     text-align: center;
@@ -226,7 +224,7 @@ a.skip-to-content:focus {
 .video iframe {
     position: absolute;
     width: 90%;
-    height: 90%;
+    /* height: 90%; */
 }
 /* xx */
 
@@ -242,13 +240,10 @@ a.skip-to-content:focus {
     margin-bottom: 150px;
 }
 
-.flipcard:hover .flipcard-inner {
+.flipcard:hover .flipcard-inner, .flipcard:focus .flipcard-inner {
     transform: rotateY(180deg);
 }
 
-.flipcard:focus .flipcard-inner {
-    transform: rotateY(180deg);
-}
 
 .flipcard-inner {
     position: relative;
@@ -262,34 +257,34 @@ a.skip-to-content:focus {
     backface-visibility: hidden;
     position: absolute;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     text-align: center;
     height: 100px;
     background-image: url("../images/background.jpeg");
 }
 
 
-.flipcard-front {
-    background-color: transparent;
-}
-
 .flipcard-back {
     transform: rotateY(180deg);
     text-align: center;
     font-size: 20;
-    padding-top: 2em;
+    /* padding-top: 2em; */
 }
 
-.flipcard-back p {
-    color: #215583;
-    -webkit-text-stroke: 0;
-}
 
 /* contact form */
-form {
+.contact-form {
     display: flex;
+    flex-direction: column;
     justify-items: center;
+
+    justify-content: center;
+    /* check */
 }
+
+/* form {
+
+} */
 
 label {
     display: none;
@@ -297,6 +292,7 @@ label {
 
 input, textarea {
     width: 300px;
+    font-family: "Montserrat", "Trebuchet MS", Helvetica;
 }
 
 
@@ -507,23 +503,6 @@ input, textarea {
     }
 
     /* video.html tablet view styling */
-    .vid-title {
-        text-align: center;
-    }
-    
-    .vid-desc {
-        text-align: center;
-        color: #c8b60d;
-    }
-    
-    .video {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-    }
     .video iframe {
         position: absolute;
         width: 80%;
@@ -565,23 +544,6 @@ input, textarea {
 
     /* video.html desktop view */
     /* video.html tablet view styling */
-    .vid-title {
-        text-align: center;
-    }
-    
-    .vid-desc {
-        text-align: center;
-        color: #c8b60d;
-    }
-    
-    .video {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-    }
     .video iframe {
         position: absolute;
         width: 70%;
