@@ -37,8 +37,6 @@ p {
     color: white;
     margin-bottom: 2em;
     margin-top: 1em;
-    padding-left: 10em;
-    padding-right: 10em;
 }
 
 
@@ -115,6 +113,10 @@ a.skip-to-content:focus {
     text-align: center;
 }
 
+/* .welcome-desc {
+    font-size: 16px;
+} */
+
 .recent-episode {
     display: flex;
     flex-direction: column;
@@ -140,13 +142,12 @@ a.skip-to-content:focus {
 .selection-desc {
     text-align: center;
     color: white;
-    padding-left: 10em;
-    padding-right: 10em;
 }
+
 #guest-photos > h2 {
     color: white;
 }
-/* guest.html episodes and guest name title mobile view */
+
 #guest-photos > h3,
 #guest-photos > h2 {
     text-align: center;
@@ -164,19 +165,19 @@ a.skip-to-content:focus {
     object-fit: cover;
     object-position: center;
     width: 90%;
-    /* margin-top: .1em; */
+    margin-top: .1em;
     margin-bottom: 5em
 }
 
 .img-wrapper > .content {
     position: absolute;
-    /* inset: 0; */
-    /* font-size: 1rem; */
+    inset: 0;
+    font-size: 1rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* text-align: center; */
+    align-items: center;
+    text-align: center;
 }
 
 .img-wrapper > img,
@@ -211,6 +212,8 @@ a.skip-to-content:focus {
 .vid-desc {
     text-align: center;
     color: #c8b60d;
+    padding: 0;
+    margin: 0;
 }
 
 .video {
@@ -224,7 +227,7 @@ a.skip-to-content:focus {
 .video iframe {
     position: absolute;
     width: 90%;
-    /* height: 90%; */
+    height: 90%;
 }
 /* xx */
 
@@ -278,13 +281,10 @@ a.skip-to-content:focus {
     flex-direction: column;
     justify-items: center;
 
-    justify-content: center;
+    /* justify-content: center; */
     /* check */
 }
 
-/* form {
-
-} */
 
 label {
     display: none;
@@ -355,6 +355,11 @@ input, textarea {
 
 /* Tablet View */
 @media (min-width: 760px) {
+
+    p {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
     
     /* Nav bar on every page */
     .nav-container {
@@ -375,7 +380,6 @@ input, textarea {
         text-decoration: none;
         color: white;
         text-transform: uppercase;
-    
     }
 
     .dropdown {
@@ -485,6 +489,13 @@ input, textarea {
     }
 
     /* guest.html tablet view */
+    .selection-desc {
+        text-align: center;
+        color: white;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
     .img-wrapper > img {
         display: block;
         margin-left: auto;
