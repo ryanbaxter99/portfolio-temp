@@ -17,7 +17,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     color: #c8b60d;
-    margin: 1em;
+    padding-top: 1em;
 }
 
 h2 { 
@@ -39,6 +39,33 @@ p {
     margin-top: 1em;
 }
 
+/* back to top button */
+.to-top {
+    text-align: right;
+    background: white;
+    position: fixed;
+    bottom: 8px;
+    right: 16px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 16px;
+    pointer-events: auto;
+    opacity: 1
+}
+
 
 /* skip to main content requirment */
 a.skip-to-content {
@@ -56,14 +83,6 @@ a.skip-to-content:focus {
     visibility: visible;
 }
 
-.nav-container {
-    display: none;
-}
-
-.mobile-logo {
-  text-align: center;
-}
-
 .skip{
     background: white;
     color: #c8b60d;
@@ -77,9 +96,19 @@ a.skip-to-content:focus {
 .skip:focus{
     top: 0px;
 }   
+/* xx */
 
-/* index photo animation */
-@keyframes slide {
+
+.nav-container {
+    display: none;
+}
+
+.mobile-logo {
+  text-align: center;
+}
+
+/* index photo animation from left -> right */
+@keyframes left-to-right {
     from {
       transform: translateX(-100%);
     }
@@ -88,34 +117,61 @@ a.skip-to-content:focus {
     }
   }
 
+  /* index photo animation from right -> left */
+  @keyframes right-to-left {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
   .index-animation-1 {
-    animation: slide 1000ms;
+    animation: left-to-right 1000ms;
   }
 
   .index-animation-2 {
-    animation: slide 1500ms;
+    animation: left-to-right 1500ms;
   }
 
   .index-animation-3 {
-    animation: slide 2000ms;
+    animation: left-to-right 2000ms;
   }
 
   .index-animation-4 {
-    animation: slide 2500ms;
+    animation: left-to-right 2500ms;
   }
+
+  .index-animation-5 {
+    animation: right-to-left 1000ms;
+  }
+
+  .index-animation-6 {
+    animation: right-to-left 1500ms;
+  }
+
+  .index-animation-7 {
+    animation: right-to-left 2000ms;
+  }
+
+  .index-animation-8 {
+    animation: right-to-left 2500ms;
+  }
+  /*  */
 
 /* index.html mobile view */
 .index-pictures {
     width: 90%;
 }
 
+.thumbnail-photos {
+    width: 50%;
+}
+
 .welcome {
     text-align: center;
 }
-
-/* .welcome-desc {
-    font-size: 16px;
-} */
 
 .recent-episode {
     display: flex;
@@ -299,29 +355,35 @@ input, textarea {
 
 
 /* contact.html photo grid */
-.personal-photos {
+.contact-photos-container {
     display: grid;
     justify-content: center;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr .5fr 1fr .5fr;
     grid-template-columns: 90%;
     justify-items: center;
 }
 
-.per1 {
+.personal-1 {
+    width: 80%;
     grid-row: 1 / span 1;
 }
 
-.per2 {
-    grid-row: 2 / span 1;
-}
-
-.per3 {
+.personal-2 {
+    width: 80%;
     grid-row: 3 / span 1;
 }
 
-.per4 {
+.podcast-capture-1 {
+    width: 100%;
+    grid-row: 2 / span 1;
+}
+
+.podcast-capture-2 {
+    width: 100%;
     grid-row: 4 / span 1;
 }
+
+
 
 /* xx */
 
@@ -362,6 +424,34 @@ input, textarea {
         padding-left: 5em;
         padding-right: 5em;
     }
+
+    /* back to top button */
+    .to-top {
+        text-align: right;
+        background: white;
+        position: fixed;
+        bottom: 16px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #1f1f1f;
+        text-decoration: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .4s;
+    }
+    
+    .to-top.active {
+        bottom: 32px;
+        pointer-events: auto;
+        opacity: 1
+    }
+    
     
     /* Nav bar on every page */
     .nav-container {
