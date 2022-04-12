@@ -457,11 +457,11 @@ input, textarea {
         text-decoration: none;
         padding: 30px; 
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-        grid-template-rows: 0.25fr;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 5em 5em;
         gap: 1px 0px;
+        row-gap: 10px;
         grid-auto-flow: row;
-        grid-template-areas: "home guests logo videos contact";
     }
 
     .nav-container a { 
@@ -489,39 +489,29 @@ input, textarea {
     }
 
     .home { 
-        grid-area: home; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;  
     }
 
     .guests { 
-        grid-area: guests; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;  
     }
 
     .logo { 
-        grid-area: logo; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;  
+        margin-top: -1.5em;
     }
 
     .videos { 
-        grid-area: videos; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        grid-row: 1 / span 1;
+        grid-column: 3 / span 1;  
     }
 
     .contact { 
-        grid-area: contact; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        grid-row: 2 / span 1;
+        grid-column: 3 / span 1;  
     }
 
     /* About page welcome images and statement */
@@ -622,6 +612,81 @@ input, textarea {
 
 /* DESKTOP view */
 @media screen and (min-width: 1000px) {
+
+    .nav-container {
+        text-align: center; 
+        font-family: 'Raleway';
+        font-weight: bolder;
+        text-decoration: none;
+        padding: 30px; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-rows: 0.25fr;
+        gap: 1px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "home guests logo videos contact";
+    }
+
+    .nav-container a { 
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: none;
+    }
+
+    .active{
+        font-weight: bold;
+        border: 3px outset; 
+    }
+
+    nav a:hover{
+        font-weight: revert; 
+        color: gold;
+    }
+
+    .home { 
+        grid-area: home; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .guests { 
+        grid-area: guests; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo { 
+        grid-area: logo; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .videos { 
+        grid-area: videos; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact { 
+        grid-area: contact; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .mobile-logo {
         display: none;
