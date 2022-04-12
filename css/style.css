@@ -185,7 +185,11 @@ a.skip-to-content:focus {
 
 .recent-desc {
     text-align: center;
-    color: #c8b60d;
+    color: white;
+}
+
+.recent-title > h2{
+    color: white;
 }
 
 /* guest.html styling */
