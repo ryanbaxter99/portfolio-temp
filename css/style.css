@@ -470,10 +470,11 @@ input, textarea {
         text-transform: uppercase;
     }
 
+    /* hides the mobile view display button */
     .dropdown {
         display: none;
     }
-
+    /* hides the mobile view logo */
     .mobile-logo {
         display: none;
     }
@@ -692,31 +693,6 @@ input, textarea {
         display: none;
     }
 
-    .personal-photos {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 25% 25% 25%;
-    }
-    
-    .per1 {
-        grid-row: 1 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    .per2 {
-        grid-row: 1 / span 1;
-        grid-column: 2 / span 1;
-    }
-    
-    .per3 {
-        grid-row: 1 / span 1;
-        grid-column: 3 / span 1;
-    }
-    
-    .per4 {
-        grid-row: 2 / span 1;
-        grid-column: 1 / span 1;
-    }
-
     /* video.html desktop view */
     /* video.html tablet view styling */
     .video iframe {
@@ -759,9 +735,11 @@ input, textarea {
     /* xx */
 }
 
+/* redu */
 @media screen and (prefers-reduced-motion: reduce) {
     /* /Turn off transition/ */
-    .index-animation-1, .index-animation-2, .index-animation-3, .index-animation-4 {
+    .index-animation-1, .index-animation-2, .index-animation-3, .index-animation-4,
+    .index-animation-5, .index-animation-6, .index-animation-7, .index-animation-8{
       animation: none;
     }
 
