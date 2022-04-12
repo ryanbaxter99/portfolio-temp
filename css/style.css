@@ -303,7 +303,6 @@ a.skip-to-content:focus {
     transform: rotateY(180deg);
 }
 
-
 .flipcard-inner {
     position: relative;
     text-align: center;
@@ -382,9 +381,6 @@ input, textarea {
     width: 100%;
     grid-row: 4 / span 1;
 }
-
-
-
 /* xx */
 
 /* style the footer and the footer links */
@@ -528,31 +524,6 @@ input, textarea {
         justify-content: center;
     }
 
-    .personal-photos {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 40% 40%;
-    }
-    
-    .per1 {
-        grid-row: 1 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    .per2 {
-        grid-row: 1 / span 1;
-        grid-column: 2 / span 1;
-    }
-    
-    .per3 {
-        grid-row: 2 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    .per4 {
-        grid-row: 2 / span 1;
-        grid-column: 2 / span 1;
-    }
-
     /* About page welcome images and statement */
     .footer-dark .item:not(.social) {
         text-align: center;
@@ -611,6 +582,42 @@ input, textarea {
         width: 80%;
         height: 80%;
     }
+
+    /* contact.html tablet view styling */
+
+    .flipcard {
+        display: block;
+    }
+
+    .contact-photos-container {
+        grid-template-rows: .5fr .5fr 1fr 1fr;
+        grid-template-columns: 45% 45%;
+        row-gap: 2em;
+    }
+    
+    .personal-1 {
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 1;
+        width: 80%;
+    }
+    
+    .personal-2 {
+        grid-row: 1 / span 2;
+        grid-column: 2 / span 1;
+        width: 80%;
+    }
+    
+    .podcast-capture-1 {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 2;
+        width: 80%;
+    }
+    
+    .podcast-capture-2 {
+        grid-row: 4 / span 1;
+        grid-column: 1 / span 2;
+        width: 80%;
+    }
 }
 
 /* DESKTOP view */
@@ -652,6 +659,39 @@ input, textarea {
         width: 70%;
         height: 70%;
     }
+    /* xx */
+
+    /* contact.html desktop styling */
+    .contact-photos-container {
+        grid-template-rows:  .5fr .5fr .5fr .5fr;
+        grid-template-columns: 30% 30% 30%;
+        row-gap: 0px;
+    }
+    
+    .personal-1 {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+        width: 80%;
+    }
+    
+    .personal-2 {
+        grid-row: 2 / span 1;
+        grid-column: 3 / span 1;
+        width: 80%;
+    }
+    
+    .podcast-capture-1 {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 2;
+        width: 80%;
+    }
+    
+    .podcast-capture-2 {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 2;
+        width: 80%;
+    }
+    /* xx */
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
