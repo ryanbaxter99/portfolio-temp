@@ -16,7 +16,7 @@ h1 {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    color: #c8b60d;
+    color: gold;
     padding-top: 1em;
 }
 
@@ -24,13 +24,13 @@ h2 {
     font-size: 2em; 
     font-style: bold;
     text-transform: uppercase;
-    color: #c8b60d;
+    color: gold;
 }
 h3 {
     font-size: 1em; 
     font-style: bold;
     text-transform: uppercase;
-    color: #c8b60d;
+    color: gold;
 }
 
 p {
@@ -256,6 +256,16 @@ a.skip-to-content:focus {
 .img-wrapper:hover > img.blur {
     filter: blur(15px);
 }
+
+/* this activates if user used tab instead of hovering */
+.fade:focus {
+    opacity: 1;
+}
+
+.blur:focus {
+    filter: blur(15px);
+}
+
 
 .content > p {
     padding: 20px;
@@ -487,6 +497,7 @@ input, textarea {
         font-weight: bold;
         border: 3px outset; 
     }
+
 
     nav a:hover{
         font-weight: revert; 
